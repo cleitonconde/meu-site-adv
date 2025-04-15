@@ -76,8 +76,8 @@ export default function Header() {
             //style={{ transform: menuOpen ? 'translateY(60px)' : 'translateY(0)' }}
           >
             <Link to="/" onClick={() => setMenuOpen(false)} className={linkStyle('/')}>Home</Link>
-            <Link to="/Trabalhista" onClick={() => setMenuOpen(false)} className={linkStyle('/trabalhista')}>Advogados</Link>
-            <Link to="/Civil" onClick={() => setMenuOpen(false)} className={linkStyle('/civil')}>Advogados</Link>
+            <Link to="/Trabalhista" onClick={() => setMenuOpen(false)} className={linkStyle('/trabalhista')}>Trabalhista</Link>
+            <Link to="/Civil" onClick={() => setMenuOpen(false)} className={linkStyle('/civil')}>Civil</Link>
             <Link to="/advogados" onClick={() => setMenuOpen(false)} className={linkStyle('/advogados')}>Advogados</Link>
             <Link to="/contato" onClick={() => setMenuOpen(false)} className={linkStyle('/contato')}>Contato</Link>
           </div>
