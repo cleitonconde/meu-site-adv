@@ -57,6 +57,8 @@ export default function Header() {
         {/* Menu desktop */}
         <nav className="hidden sm:flex justify-evenly mt-4 bg-black bg-opacity-60 py-2 rounded w-full">
           <Link to="/" className={`flex-1 text-center text-lg ${linkStyle('/')}`}>Home</Link>
+          <Link to="/trabalhista" className={`flex-1 text-center text-lg ${linkStyle('/trabalhista')}`}>Trabalhista</Link>
+          <Link to="/civil" className={`flex-1 text-center text-lg ${linkStyle('/civil')}`}>Civil</Link>
           <Link to="/advogados" className={`flex-1 text-center text-lg ${linkStyle('/advogados')}`}>Advogados</Link>
           <Link to="/contato" className={`flex-1 text-center text-lg ${linkStyle('/contato')}`}>Contato</Link>
         </nav>
@@ -65,6 +67,8 @@ export default function Header() {
         {menuOpen && (
           <div className="sm:hidden flex flex-col items-center space-y-3 pt-4">
             <Link to="/" onClick={() => setMenuOpen(false)} className={linkStyle('/')}>Home</Link>
+            <Link to="/trabalhista" className={`flex-1 text-center text-lg ${linkStyle('/trabalhista')}`}>Trabalhista</Link>
+            <Link to="/civil" className={`flex-1 text-center text-lg ${linkStyle('/civil')}`}>Civil</Link>
             <Link to="/advogados" onClick={() => setMenuOpen(false)} className={linkStyle('/advogados')}>Advogados</Link>
             <Link to="/contato" onClick={() => setMenuOpen(false)} className={linkStyle('/contato')}>Contato</Link>
           </div>

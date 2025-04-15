@@ -3,6 +3,8 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Home from './pages/Home4'
 import Advogados from './pages/Advogados'
 import Contato from './pages/Contato'
+import Trabalhista from './pages/Trabalhista'
+import Civil from './pages/Civil'
 import Header from './components/Header'
 
 function App() {
@@ -17,6 +19,8 @@ function App() {
         <div className="pt-32 px-4">
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/trabalhista" element={<Trabalhista />} />
+            <Route path="/civil" element={<Civil />} />
             <Route path="/advogados" element={<Advogados />} />
             <Route path="/contato" element={<Contato />} />
           </Routes>
