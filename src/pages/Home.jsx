@@ -1,5 +1,5 @@
 // src/pages/Home.jsx
-export default function Home2() {
+export default function Home() {
   return (
     <div className="relative h-screen bg-[url('/images/home-bg.jpg')] bg-cover bg-center bg-no-repeat">
       {/* Overlay preto transparente cobrindo toda a tela */}
