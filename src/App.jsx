@@ -12,8 +12,10 @@ function App() {
     <Router>
       {/* Container com imagem de fundo para todas as páginas */}
       <div className="relative min-h-screen bg-cover bg-center bg-no-repeat flex flex-col " style={{ backgroundImage: "url('/images/home-bg.jpg')" }}>
+      <div className="absolute inset-0 bg-black opacity-10 z-0"></div>
         
         {/* Header fixo */}
+        <div className="relative z-10">
         <Header />
 
         {/* Conteúdo principal com espaço para o header */}
@@ -26,6 +28,7 @@ function App() {
             <Route path="/contato" element={<Contato />} />
           </Routes>
         </main>
+        </div>
 
         {/* Rodapé fixo abaixo de tudo */}
         <Footer />

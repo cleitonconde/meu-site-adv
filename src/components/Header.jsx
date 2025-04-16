@@ -37,9 +37,9 @@ export default function Header() {
         {!menuOpen && (
           <div className="flex items-center justify-between sm:justify-start space-x-6">
             <img
-              src="/images/logos/logotiposegundario.png"
+              src={scrolled ? "/images/logos/logosegundario.png" : "/images/logos/logotiposegundario.png"}
               alt="Logo do Escritório"
-              className="w-32 h-16 sm:w-64 sm:h-32 object-contain"
+              className="w-32 h-16 sm:w-64 sm:h-32 object-contain brightness-95"
             />
             {/* Botão hamburguer (mobile) */}
             <div className="sm:hidden ml-auto">
