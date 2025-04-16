@@ -20,7 +20,7 @@ export default function Header() {
     setMenuOpen(!menuOpen)
   }
 
-  // Função para definir estilo do link ativo
+  // Estilo do link ativo
   const linkStyle = (path) =>
     location.pathname === path
       ? 'text-yellow-400 font-bold underline'
@@ -29,30 +29,26 @@ export default function Header() {
   return (
     <header
       className={`w-full fixed top-0 z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black bg-opacity-80 shadow-md backdrop-blur' : 'bg-transparent'
+        scrolled || menuOpen ? 'bg-black bg-opacity-80 shadow-md backdrop-blur' : 'bg-transparent'
       }`}
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-        {/* Parte de cima: título e botão mobile */}
-        {/*<div className="flex items-center justify-between">*/}
-        <div className="flex items-center justify-center sm:justify-start space-x-4">
-          <img
-            src="/images/balanca2.png" // ou o caminho da sua imagem
-            alt="Logo do Escritório"
-            className="w-10 h-10 sm:w-12 sm:h-12 object-contain"
-          />
-          <h1 className="text-black text-xl sm:text-4xl font-bold text-center w-full sm:w-auto font-[Charm]">
-            Martin & Oliveira
-          </h1>
-
-
-          {/* Botão hamburguer (mobile) */}
-          <div className="sm:hidden">
-            <button onClick={toggleMenu} className="text-white">
-              {menuOpen ? <X size={28} /> : <Menu size={28} />}
-            </button>
+        {/* Parte superior - escondida quando menuOpen */}
+        {!menuOpen && (
+          <div className="flex items-center justify-between sm:justify-start space-x-6">
+            <img
+              src="/images/logos/logotiposegundario.png"
+              alt="Logo do Escritório"
+              className="w-32 h-16 sm:w-64 sm:h-32 object-contain"
+            />
+            {/* Botão hamburguer (mobile) */}
+            <div className="sm:hidden ml-auto">
+              <button onClick={toggleMenu} className="text-white">
+                <Menu size={28} />
+              </button>
+            </div>
           </div>
-        </div>
+        )}
 
         {/* Menu desktop */}
         <nav className="hidden sm:flex justify-evenly mt-4 bg-black bg-opacity-60 py-2 rounded w-full">
@@ -63,14 +59,22 @@ export default function Header() {
           <Link to="/contato" className={`flex-1 text-center text-lg ${linkStyle('/contato')}`}>Contato</Link>
         </nav>
 
-        {/* Menu mobile */}
+        {/* Menu mobile - aparece com novo logo quando menuOpen */}
         {menuOpen && (
-          <div className="sm:hidden flex flex-col items-center space-y-3 pt-4">
-            <Link to="/" onClick={() => setMenuOpen(false)} className={linkStyle('/')}>Home</Link>
-            <Link to="/trabalhista" className={`flex-1 text-center text-lg ${linkStyle('/trabalhista')}`}>Trabalhista</Link>
-            <Link to="/civil" className={`flex-1 text-center text-lg ${linkStyle('/civil')}`}>Civil</Link>
-            <Link to="/advogados" onClick={() => setMenuOpen(false)} className={linkStyle('/advogados')}>Advogados</Link>
-            <Link to="/contato" onClick={() => setMenuOpen(false)} className={linkStyle('/contato')}>Contato</Link>
+          <div className="sm:hidden flex flex-col items-center space-y-4 pt-6 bg-black bg-opacity-90 transition-all duration-300 pb-6">
+            <img
+              src="/images/logos/logo.png"
+              alt="Logo central"
+              className="w-44 h-auto"
+            />
+            <button onClick={toggleMenu} className="text-white absolute top-4 right-4">
+              <X size={28} />
+            </button>
+            <Link to="/" onClick={toggleMenu} className={linkStyle('/')}>Home</Link>
+            <Link to="/trabalhista" onClick={toggleMenu} className={linkStyle('/trabalhista')}>Trabalhista</Link>
+            <Link to="/civil" onClick={toggleMenu} className={linkStyle('/civil')}>Civil</Link>
+            <Link to="/advogados" onClick={toggleMenu} className={linkStyle('/advogados')}>Advogados</Link>
+            <Link to="/contato" onClick={toggleMenu} className={linkStyle('/contato')}>Contato</Link>
           </div>
         )}
       </div>
