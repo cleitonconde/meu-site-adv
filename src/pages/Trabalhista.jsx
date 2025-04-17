@@ -1,20 +1,31 @@
+import { useState } from 'react'
+import './../components/flip.css' // Vamos criar esse arquivo para os estilos de flip
+
 export default function Trabalhista() {
     const servicos = [
-        { img: '/images/trabalhista/acidente-trabalho.png', titulo: 'Acidente de Trabalho' },
-        { img: '/images/trabalhista/dano-moral.png', titulo: 'Dano Moral' },
-        { img: '/images/trabalhista/hora-extra.png', titulo: 'Horas Extras' },
-        { img: '/images/trabalhista/justa-causa.png', titulo: 'Justa Causa' },
-        { img: '/images/trabalhista/perigo.png', titulo: 'Adicional de Periculosidade e Insalubridade' },
-        { img: '/images/trabalhista/discriminacao.png', titulo: 'Assédio Moral' },
-        { img: '/images/trabalhista/contrato.png', titulo: 'Rescisão Indireta' },
-        { img: '/images/trabalhista/carteira-de-identidade.png', titulo: 'Trabalho sem Carteira Assinada' },
-        { img: '/images/trabalhista/consultoria.png', titulo: 'Consultoria Preventiva entre outros' },
+        { img: '/images/trabalhista/acidente-trabalho.png', titulo: 'Acidente de Trabalho', descricao: 'Suporte jurídico em casos de acidentes de trabalho, incluindo indenizações, benefícios e direitos do trabalhador acidentado.' },
+        { img: '/images/trabalhista/dano-moral.png', titulo: 'Dano Moral', descricao: 'Representação legal em casos de dano moral no ambiente de trabalho, buscando reparação e compensação para o trabalhador afetado.' },
+        { img: '/images/trabalhista/hora-extra.png', titulo: 'Horas Extras', descricao: 'Assessoria jurídica para questões relacionadas a horas extras, incluindo cálculos, direitos do trabalho e procedimentos legais.' },
+        { img: '/images/trabalhista/justa-causa.png', titulo: 'Demissão por Justa Causa', descricao: 'Orientações e defesa legal em casos de demissão por justa causa, garantindo os direitos do trabalhador e contestando decições injustas.' },
+        { img: '/images/trabalhista/perigo.png', titulo: 'Adicional de Periculosidade e Insalubridade', descricao: 'Análise e assistência para garantir o recebimento correto e adicional de periculosidade e insalubridade de acordo com a legislação.' },
+        { img: '/images/trabalhista/discriminacao.png', titulo: 'Assédio Moral', descricao: 'Apoio legal em casos de assédio moral no ambiente de trabalho, incluindo orientações, denúncias e medidas legais.' },
+        { img: '/images/trabalhista/contrato.png', titulo: 'Rescisão Indireta', descricao: 'Assistência jurídica para trabalhadores que buscam a rescisão indireta do contrato de trabalho devido a irregularidades graves por parte do empregador.' },
+        { img: '/images/trabalhista/carteira-de-identidade.png', titulo: 'Trabalho sem Carteira Assinada', descricao: 'Auxílio legal para trabalhadores que enfrentam situações de trabalho sem registro formal, buscando regularizações e direitos trabalhistas.' },
+        { img: '/images/trabalhista/consultoria.png', titulo: 'Consultoria Preventiva', descricao: 'Representação legal em casos de dano moral no ambiente de trabalho, buscando reparação e compensação para o trabalhador afetado.' }
     ]
+
+    const [flipped, setFlipped] = useState(Array(servicos.length).fill(false))
+
+    const toggleFlip = (index) => {
+        const updated = [...flipped]
+        updated[index] = !updated[index]
+        setFlipped(updated)
+    }
 
     return (
         <div className="min-h-screen py-10 sm:py-36">
             <div className="max-w-4xl mx-auto bg-black bg-opacity-15 rounded-lg p-10">
-                <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white font-[Georgia]">
+                <h1 className="text-3xl sm:text-4xl font-bold text-center shadow-lg mb-10 text-white font-[Georgia]">
                     Atuação na Área Trabalhista
                 </h1>
 
@@ -30,14 +41,22 @@ export default function Trabalhista() {
                             {servicos.map((item, index) => (
                                 <div
                                     key={index}
-                                    className="bg-gray-100 p-4 rounded-lg shadow text-center"
+                                    className={`flip-card ${flipped[index] ? 'flipped' : ''}`}
+                                    onClick={() => toggleFlip(index)}
                                 >
-                                    <img
-                                        src={item.img}
-                                        alt={item.titulo}
-                                        className="w-28 h-28 object-contain mx-auto mb-3"
-                                    />
-                                    <p className="font-semibold">{item.titulo}</p>
+                                    <div className="flip-inner">
+                                        <div className="flip-front bg-gray-100 p-4 rounded-lg shadow text-center">
+                                            <img
+                                                src={item.img}
+                                                alt={item.titulo}
+                                                className="w-28 h-28 object-contain mx-auto mb-2"
+                                            />
+                                            <p className="font-semibold text-sm">{item.titulo}</p>
+                                        </div>
+                                        <div className="flip-back bg-white p-4 rounded-lg shadow text-center flex items-center justify-center">
+                                            <p className="font-semibold">{item.descricao}</p>
+                                        </div>
+                                    </div>
                                 </div>
                             ))}
                         </div>

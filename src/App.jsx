@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 import Home from './pages/Home'
 import Advogados from './pages/Advogados'
 import Contato from './pages/Contato'

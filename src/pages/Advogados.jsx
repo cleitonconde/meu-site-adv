@@ -1,8 +1,8 @@
 export default function Advogados() {
   return (
     <div className="min-h-screen py-10 sm:py-36 px-4">
-      <div className="max-w-4xl mx-auto bg-black bg-opacity-10 rounded-lg">
-        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white font-[Georgia]">Nossos Advogados</h1>
+      <div className="max-w-4xl mx-auto bg-black bg-opacity-15 rounded-lg p-10">
+        <h1 className="text-3xl sm:text-4xl font-bold text-center mb-10 text-white shadow-lg px_#fff] font-[Georgia]">Nossos Advogados</h1>
 
         <div className="space-y-10 ">
           {/* Card do Advogado 1 */}
