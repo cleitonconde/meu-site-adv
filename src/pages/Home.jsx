@@ -1,4 +1,4 @@
-import Preocupacoes from './../components/Preocupacoes' // ajuste o caminho conforme necessário
+import Preocupacoes from './../components/Preocupacoes'
 
 export default function Home() {
   return (

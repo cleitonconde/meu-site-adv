@@ -1,5 +1,6 @@
 import { useState } from 'react'
-import './../components/flip.css' // Vamos criar esse arquivo para os estilos de flip
+import './../components/flip.css'
+import ServicosTrabalhistas from './../components/ServicosTrabalhistas'
 
 export default function Trabalhista() {
     const servicos = [
@@ -61,22 +62,8 @@ export default function Trabalhista() {
                             ))}
                         </div>
                     </div>
-
-                    <h2 className="text-2xl font-semibold mt-6 mb-2">Serviços prestados:</h2>
-                    <ul className="list-disc list-inside mb-4 ml-4">
-                        <li>Defesa e orientação em <strong>ações trabalhistas</strong> individuais e coletivas;</li>
-                        <li>Assessoria preventiva, com foco em <strong>compliance trabalhista</strong> e <strong>adequação à legislação vigente</strong>;</li>
-                        <li>Atuação em <strong>acordos e negociações coletivas</strong>;</li>
-                        <li><strong>Revisão de contratos</strong>, políticas internas e práticas de RH;</li>
-                        <li>Representação em <strong>reclamatórias trabalhistas</strong>, com foco em mediação e soluções estratégicas.</li>
-                    </ul>
-                    <h2 className="text-2xl font-semibold mt-6 mb-2">Nossas principais preocupações:</h2>
-                    <ul className="list-disc list-inside mb-4 ml-4">
-                        <li><strong>Proteger os direitos do trabalhador</strong>, zelando por condições dignas, remuneração adequada e respeito às normas da CLT;</li>
-                        <li><strong>Preservar a segurança jurídica das empresas</strong>, evitando passivos trabalhistas e conflitos que comprometam a sustentabilidade do negócio;</li>
-                        <li><strong>Agir com ética, responsabilidade e transparência</strong>, promovendo soluções que beneficiem ambas as partes e reduzam litígios.</li>
-                    </ul>
-                    <p className="mt-4 text-justify leading-relaxed">
+                    <ServicosTrabalhistas />
+                    <p className="mt-8 text-justify leading-relaxed">
                         Nosso time é formado por advogados especializados, que atuam com empatia, conhecimento técnico e visão estratégica, buscando sempre <strong>o equilíbrio entre os interesses do empregado e do empregador</strong>, dentro do que a legislação permite.
                     </p>
                 </div>
