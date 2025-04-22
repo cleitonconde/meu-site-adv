@@ -40,7 +40,7 @@ export default function Header() {
             <img
               src={scrolled ? "/images/logos/logosegundario.png" : "/images/logos/logotiposegundario.png"}
               alt="Logo do Escritório"
-              className="w-32 h-16 sm:w-64 sm:h-32 object-contain brightness-95"
+              className="w-38 h-20 sm:w-64 sm:h-32 object-contain brightness-95"
             />
             <div className="flex items-center ml-auto space-x-4">
               {/* Ícones de redes sociais - só aparecem em telas maiores */}
@@ -84,11 +84,11 @@ export default function Header() {
             <button onClick={toggleMenu} className="text-white absolute top-4 right-4">
               <X size={28} />
             </button>
-            <Link to="/" onClick={toggleMenu} className={linkStyle('/')}>Home</Link>
-            <Link to="/trabalhista" onClick={toggleMenu} className={linkStyle('/trabalhista')}>Trabalhista</Link>
-            <Link to="/civil" onClick={toggleMenu} className={linkStyle('/civil')}>Civil</Link>
-            <Link to="/advogados" onClick={toggleMenu} className={linkStyle('/advogados')}>Advogados</Link>
-            <Link to="/contato" onClick={toggleMenu} className={linkStyle('/contato')}>Contato</Link>
+            <Link to="/" onClick={() => {toggleMenu(); window.scrollTo(0, 0)}} className={linkStyle('/')}>Home</Link>
+            <Link to="/trabalhista" onClick={() => {toggleMenu(); window.scrollTo(0, 0)}} className={linkStyle('/trabalhista')}>Trabalhista</Link>
+            <Link to="/civil" onClick={() => {toggleMenu(); window.scrollTo(0, 0)}} className={linkStyle('/civil')}>Civil</Link>
+            <Link to="/advogados" onClick={() => {toggleMenu(); window.scrollTo(0, 0)}} className={linkStyle('/advogados')}>Advogados</Link>
+            <Link to="/contato" onClick={() => {toggleMenu(); window.scrollTo(0, 0)}} className={linkStyle('/contato')}>Contato</Link>
             <div className="text-xl flex items-center space-x-2 text-white font-bold">
               <a href="https://wa.me/5519997637219?text=Olá!%20Acessei%20o%20site%20da%20Martin%20e%20Oliveira%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer">
                 <FaWhatsapp size={30} className="hover:text-green-500" />

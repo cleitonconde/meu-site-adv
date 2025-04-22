@@ -25,7 +25,7 @@ export default function Trabalhista() {
     return (
         <div className="min-h-screen py-10 sm:py-36">
             <div className="max-w-4xl mx-auto bg-black bg-opacity-15 rounded-lg p-10">
-                <h1 className="text-3xl sm:text-4xl font-bold text-center shadow-lg mb-10 text-white font-[Georgia]">
+                <h1 className="text-3xl sm:text-4xl font-bold font-poppins text-center shadow-lg mb-10 text-white font-[Georgia]">
                     Atuação na Área Trabalhista
                 </h1>
 
