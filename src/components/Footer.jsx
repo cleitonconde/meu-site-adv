@@ -6,7 +6,7 @@ export default function Footer() {
           <p className="text-sm"> R. Siqueira Campos, 358 - Centro</p>
           <p className="text-sm"> Mogi Guaçu - SP</p>
           <p className="text-xs mt-2">
-            Desenvolvido por Cleiton | <a href="mailto:contato@martineoliveira.com" className="underline hover:text-yellow-400">contato@martineoliveira.com</a>
+           <a href="mailto:martineoliveira.advocacia@gmail.com" className="underline hover:text-yellow-400">martineoliveira.advocacia@gmail.com</a>
           </p>
         </div>
       </footer>

@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import { ShieldCheck, MessageCircle, Home, Handshake, Heart, Clock, Lock } from 'lucide-react'
 import './../components/flip.css'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 
 export default function Civil() {
     const servicos = [
@@ -23,7 +24,7 @@ export default function Civil() {
     return (
         <div className="min-h-screen py-10 sm:py-36">
             <div className="max-w-4xl mx-auto bg-black bg-opacity-15 rounded-lg p-10">
-                <h1 className="text-3xl sm:text-4xl font-bold font-poppins text-center shadow-lg mb-10 text-white font-[Georgia]">
+                <h1 className="text-3xl sm:text-4xl font-bold font-cinzel text-center shadow-lg mb-10 text-white font-[Georgia]">
                     Atuação na Área Civil
                 </h1>
 
@@ -57,6 +58,17 @@ export default function Civil() {
                                     </div>
                                 </div>
                             ))}
+                        </div>
+                        <div className="mt-10 flex justify-center">
+                            <a
+                                href="https://wa.me/5519998082424?text=Olá%20Lucas,%20gostaria%20de%20mais%20informações."
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-left text-sm sm:text-base font-semibold py-3 px-3 sm:px-6 rounded-full shadow-lg transition-all duration-300"
+                            >
+                                <FaWhatsapp className="text-xl" />
+                                Fale com o Advogado
+                            </a>
                         </div>
                     </div>
                 </div>

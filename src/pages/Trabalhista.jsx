@@ -1,6 +1,7 @@
 import { useState } from 'react'
 import './../components/flip.css'
 import ServicosTrabalhistas from './../components/ServicosTrabalhistas'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 
 export default function Trabalhista() {
     const servicos = [
@@ -26,7 +27,7 @@ export default function Trabalhista() {
     return (
         <div className="min-h-screen py-10 sm:py-36">
             <div className="max-w-4xl mx-auto bg-black bg-opacity-15 rounded-lg p-10">
-                <h1 className="text-3xl sm:text-4xl font-bold font-poppins text-center shadow-lg mb-10 text-white font-[Georgia]">
+                <h1 className="text-3xl sm:text-4xl font-bold font-poppins text-center shadow-lg mb-10 text-white font-cinzel">
                     Atuação na Área Trabalhista
                 </h1>
 
@@ -66,6 +67,17 @@ export default function Trabalhista() {
                     <p className="mt-8 text-justify leading-relaxed">
                         Nosso time é formado por advogados especializados, que atuam com empatia, conhecimento técnico e visão estratégica, buscando sempre <strong>o equilíbrio entre os interesses do empregado e do empregador</strong>, dentro do que a legislação permite.
                     </p>
+                    <div className="mt-8 flex justify-center">
+                        <a
+                            href="https://wa.me/5519997637219?text=Olá%20Lucas,%20gostaria%20de%20mais%20informações."
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-left text-sm sm:text-base font-semibold py-3 px-3 sm:px-6 rounded-full shadow-lg transition-all duration-300"
+                        >
+                            <FaWhatsapp className="text-xl" />
+                            Fale com o Advogado
+                        </a>
+                    </div>
                 </div>
             </div>
         </div>

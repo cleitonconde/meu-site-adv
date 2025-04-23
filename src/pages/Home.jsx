@@ -8,7 +8,7 @@ export default function Home() {
           {/* Seção Quem Somos */}
           <div className="flex flex-col sm:flex-row items-center bg-white shadow-lg overflow-hidden">
             <div className="max-w-[1050px] p-6">
-              <h1 className="text-3xl font-bold font-poppins text-top mb-6 shadow-lg">
+              <h1 className="text-3xl font-bold font-cinzel text-top mb-6 shadow-lg">
                 Quem Somos
               </h1>
               <p className="text-gray-700 text-justify leading-relaxed">
@@ -30,7 +30,7 @@ export default function Home() {
 
           {/* Seção Preocupações - Direito Civil */}
           <div className="bg-white shadow-lg rounded-lg p-6">
-            <h2 className="text-3xl font-bold font-poppins mb-4 text-gray-800">Nossas Preocupações com Você</h2>
+            <h2 className="text-3xl font-bold font-cinzel mb-4 shadow-lg text-gray-800">Nossas Preocupações com Você</h2>
             <Preocupacoes />
           </div>
         </div>

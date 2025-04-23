@@ -5,6 +5,9 @@ module.exports = {
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
       },
+      fontFamily: {
+        cinzel: ['Cinzel', 'serif'],
+      },
     },
   },
   plugins: [],
