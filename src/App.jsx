@@ -7,6 +7,7 @@ import Trabalhista from './pages/Trabalhista'
 import Civil from './pages/Civil'
 import Header from './components/Header'
 import Footer from './components/Footer'
+import BotaoWhatsApp from './components/BotaoWhatsApp'
 
 
 function App() {
@@ -14,26 +15,27 @@ function App() {
     <Router>
       {/* Container com imagem de fundo para todas as páginas */}
       <div className="relative min-h-screen bg-fixed bg-top bg-no-repeat flex flex-col " style={{ backgroundImage: "url('/images/home-bg.jpg')" }}>
-      <div className="absolute inset-0 bg-black opacity-10 z-0"></div>
-        
+        <div className="absolute inset-0 bg-black opacity-10 z-0"></div>
+
         {/* Header fixo */}
         <div className="relative z-10">
-        <Header />
+          <Header />
 
-        {/* Conteúdo principal com espaço para o header */}
-        <main className="pt-32 px-4 flex-grow">
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/trabalhista" element={<Trabalhista />} />
-            <Route path="/civil" element={<Civil />} />
-            <Route path="/advogados" element={<Advogados />} />
-            <Route path="/contato" element={<Contato />} />
-          </Routes>
-        </main>
+          {/* Conteúdo principal com espaço para o header */}
+          <main className="pt-32 px-4 flex-grow">
+            <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/trabalhista" element={<Trabalhista />} />
+              <Route path="/civil" element={<Civil />} />
+              <Route path="/advogados" element={<Advogados />} />
+              <Route path="/contato" element={<Contato />} />
+            </Routes>
+          </main>
+          {/* Rodapé fixo abaixo de tudo */}
+          <Footer />
         </div>
+        <BotaoWhatsApp />
 
-        {/* Rodapé fixo abaixo de tudo */}
-        <Footer />
       </div>
     </Router>
   )
