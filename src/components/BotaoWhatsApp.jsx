@@ -10,7 +10,7 @@ export default function BotaoWhatsApp() {
       //className="inline-flex items-center gap-2 bg-green-500 hover:bg-green-600 text-white text-left text-sm sm:text-base font-semibold py-3 px-6 rounded-full shadow-lg transition-all duration-300"
     >
       <FaWhatsapp  size={24} className="text-base sm:text-xl" />
-      <span className="hidden md:inline font-semibold">Atendimento WhatsApp</span>
+      {/*<span className="hidden md:inline font-semibold">Atendimento WhatsApp</span>*/}
       
     </a>
   )

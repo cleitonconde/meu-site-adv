@@ -1,4 +1,5 @@
 import Preocupacoes from './../components/Preocupacoes'
+import { FaWhatsapp, FaInstagram } from 'react-icons/fa'
 
 export default function Home() {
   return (
@@ -26,6 +27,18 @@ export default function Home() {
               alt="Simbolo"
               className="w-[128px] h-[152px] sm:w-[192px] sm:h-[350px] object-cover flex-shrink-0 mt-4 sm:mt-0 mb-4 sm:mb-0 transform transition duration-300 hover:-translate-y-1 hover:scale-125 hover:shadow-xl"
             />
+          </div>
+
+          <div className="mb-10 flex justify-center">
+            <a
+              href="https://wa.me/5519997637219?text=Olá%20Lucas,%20gostaria%20de%20mais%20informações."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-600 text-white text-left text-sm sm:text-base font-semibold py-3 px-3 sm:px-6 rounded-full shadow-lg transition-all duration-300"
+            >
+              <FaWhatsapp className="text-xl" />
+              Fale com o Advogado
+            </a>
           </div>
 
           {/* Seção Preocupações - Direito Civil */}
