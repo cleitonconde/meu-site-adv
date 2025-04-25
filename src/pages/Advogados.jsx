@@ -39,13 +39,13 @@ export default function Advogados() {
           {/* Card do Advogado 2 */}
           <div className="flex flex-col sm:flex-row items-center bg-white shadow-md rounded-lg overflow-hidden">
             <img
-              src="/images/advogados/patrao.jpeg"
+              src="/images/advogados/igor.jpeg"
               alt="Dr. Igor Oliveira"
               //className="w-full sm:w-48 h-64 object-cover"
               className="w-[192px] h-[256px] object-cover flex-shrink-0 mt-4 sm:mt-0"
             />
             <div className="p-6 text-gray-800 text-justify">
-              <h2 className="text-xl font-bold mb-2">Dr. Igor Oliveira Firme</h2>
+            <h2 className="text-lg sm:text-xl text-left font-bold">Dr. Igor Oliveira Firme</h2>
               <p className="text-sm font-poppins mb-2"> OAB/SP - 413.751</p>
               <p>
                 Com forte atuação em Direito Civil, Dr. Igor é reconhecido por sua dedicação e empatia ao tratar dos interesses dos seus clientes. Seu trabalho inclui desde consultorias até contencioso em tribunais.

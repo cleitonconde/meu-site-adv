@@ -45,7 +45,7 @@ export default function Header() {
             <div className="flex items-center ml-auto space-x-4">
               {/* Ícones de redes sociais - só aparecem em telas maiores */}
               <div className="hidden sm:flex space-x-4">
-                <a href="https://wa.me/5519997637219?text=Olá!%20Acessei%20o%20site%20da%20Martin%20&%20Oliveira%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-500">
+                <a href="https://wa.me/5519997637219?text=Olá!%20Acessei%20o%20site%20da%20Martin%20e%20Oliveira%20e%20gostaria%20de%20mais%20informações." target="_blank" rel="noopener noreferrer" className="text-white hover:text-green-500">
                   <FaWhatsapp size={30} className="text-white hover:text-green-500" />
                 </a>
                 <a href="https://www.instagram.com/martineoliveiraadv" target="_blank" rel="noopener noreferrer" className="text-white hover:text-pink-400">
